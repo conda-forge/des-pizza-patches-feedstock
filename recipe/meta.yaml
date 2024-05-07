@@ -10,16 +10,15 @@ source:
   sha256: ea5f9144025e088a2d999bf9dc97e62361ed3972b0a571fa9ea80cb6bb5ba3f7
 
 build:
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.8
+    - python
     - pip
   run:
-    - python >=3.8
+    - python
     - numpy
     - treecorr
     - fitsio
