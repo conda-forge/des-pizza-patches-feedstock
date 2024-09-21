@@ -1,5 +1,5 @@
 {% set name = "des-pizza-patches" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/esheldon/pizza-patches/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ea5f9144025e088a2d999bf9dc97e62361ed3972b0a571fa9ea80cb6bb5ba3f7
+  sha256: af069c2cc3574f61f605393be70efbee8dcad7731ee389f623128a8187defaf1
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
 
 requirements:
   build:
